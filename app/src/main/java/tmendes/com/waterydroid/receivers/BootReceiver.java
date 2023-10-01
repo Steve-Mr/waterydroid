@@ -33,7 +33,7 @@ public class BootReceiver extends BroadcastReceiver {
         if (intent != null && intent.getAction() != null) {
             if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
                 SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-                int notificationFrequency = Integer.valueOf(prefs.getString("notification_frequency", "120"));
+                int notificationFrequency = Integer.parseInt(prefs.getString("notification_frequency", "120"));
                 boolean notificationsNewMessage = prefs.getBoolean("notifications_new_message", true);
                 alarm.cancelAlarm(context);
                 if (notificationsNewMessage) {

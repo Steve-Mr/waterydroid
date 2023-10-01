@@ -64,9 +64,7 @@ public class TimePreference extends DialogPreference {
             picker.setHour(calendar.get(Calendar.HOUR_OF_DAY));
             picker.setMinute(calendar.get(Calendar.MINUTE));
         } else {
-            //noinspection deprecation
             picker.setCurrentHour(calendar.get(Calendar.HOUR_OF_DAY));
-            //noinspection deprecation
             picker.setCurrentMinute(calendar.get(Calendar.MINUTE));
         }
     }
@@ -80,9 +78,7 @@ public class TimePreference extends DialogPreference {
                 calendar.set(Calendar.HOUR_OF_DAY, picker.getHour());
                 calendar.set(Calendar.MINUTE, picker.getMinute());
             } else {
-                //noinspection deprecation
                 calendar.set(Calendar.HOUR_OF_DAY, picker.getCurrentHour());
-                //noinspection deprecation
                 calendar.set(Calendar.MINUTE, picker.getCurrentMinute());
             }
 

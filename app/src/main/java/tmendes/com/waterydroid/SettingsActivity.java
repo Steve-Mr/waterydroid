@@ -16,10 +16,12 @@
 
 package tmendes.com.waterydroid;
 
+import android.Manifest;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.media.Ringtone;
 import android.media.RingtoneManager;
@@ -33,6 +35,9 @@ import android.preference.PreferenceManager;
 import android.preference.RingtonePreference;
 import android.text.TextUtils;
 import android.view.MenuItem;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.content.ContextCompat;
 
 import java.util.List;
 
@@ -113,6 +118,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         .getString(preference.getKey(), ""));
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.TIRAMISU)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -123,6 +129,17 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         alarm.cancelAlarm(this);
         if (notificationsNewMessage) {
+
+            if (ContextCompat.checkSelfPermission(
+                    this, android.Manifest.permission.POST_NOTIFICATIONS) ==
+                    PackageManager.PERMISSION_GRANTED) {
+
+            } else {
+                // You can directly ask for the permission.
+                requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 10010);
+            }
+
+
             alarm.setAlarm(this, notificationFrequency);
         }
     }
