@@ -79,7 +79,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Downloads/canteen_998801.png" />
+                                                <entry key="imagePath" value="$USER_HOME$/Downloads/canteen_998903.png" />
                                                 <entry key="scalingPercent" value="56" />
                                               </map>
                                             </option>
@@ -114,7 +114,6 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="fde93d" />
-                                      <entry key="foregroundLayerName" value="ic_launcher_monochrome" />
                                       <entry key="legacyIconShape" value="NONE" />
                                     </map>
                                   </option>
