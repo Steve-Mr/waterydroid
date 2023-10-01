@@ -25,11 +25,13 @@
     <tmendes.com.waterydroid.TimePreference
         android:dependency="notifications_new_message"
         android:key="pref_notification_start"
-        android:title="@string/pref_notification_start" />
+        android:title="@string/pref_notification_start"
+        android:dialogTitle=""/>
 
     <tmendes.com.waterydroid.TimePreference
         android:dependency="notifications_new_message"
         android:key="pref_notification_stop"
-        android:title="@string/pref_notification_stop" />
+        android:title="@string/pref_notification_stop"
+        android:dialogTitle=""/>
 
 </PreferenceScreen>
