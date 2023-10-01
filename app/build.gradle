@@ -13,8 +13,22 @@ android {
     namespace 'tmendes.com.waterydroid'
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    splits {
+        // Configures multiple APKs based on ABI.
+        abi {
+            // Enables building multiple APKs per ABI.
+            enable true
+
+            // Specifies the ABIs that Gradle should create APKs for.
+            // This example creates APKs for the armeabi-v7a, arm64-v8a, x86, and x86_64 ABIs.
+            // Other ABIs that you could include are: mips, mips64, and ppc64.
+            universalApk false
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
         }
     }
     productFlavors {
