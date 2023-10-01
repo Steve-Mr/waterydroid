@@ -26,4 +26,5 @@
     <string name="pref_notification_stop">Stop notifications at</string>
     <string name="settings_time_set">Set</string>
     <string name="settings_time_cancel">Cancel</string>
+    <string name="channelName">Drink Reminder</string>
 </resources>

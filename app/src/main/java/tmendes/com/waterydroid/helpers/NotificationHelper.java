@@ -22,6 +22,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.content.ContextWrapper;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 
@@ -40,7 +41,7 @@ public class NotificationHelper extends ContextWrapper {
     private NotificationManager notificationManager;
 
     private static final String CHANNEL_ONE_ID = "tmendes.com.waterydroid.CHANNELONE";
-    private static final String CHANNEL_ONE_NAME = "Channel One";
+    private static final String CHANNEL_ONE_NAME = Resources.getSystem().getString(R.string.channelName);
 
     private final Context ctx;
 
