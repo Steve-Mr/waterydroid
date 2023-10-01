@@ -16,22 +16,16 @@
 
 package tmendes.com.waterydroid;
 
-import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
+import android.view.MenuInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.content.ContextCompat;
-
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 public abstract class AppCompatPreferenceActivity extends PreferenceActivity {
 
