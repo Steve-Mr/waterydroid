@@ -46,7 +46,7 @@ public class AlarmHelper {
         PendingIntent pendingAlarmIntent = PendingIntent.getBroadcast(context,
                 0,
                 alarmIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_IMMUTABLE);
 
         Log.i("AlarmHelper", "Setting Alarm Interval to: " + notificationFrequency + " minutes");
 
@@ -71,7 +71,7 @@ public class AlarmHelper {
         PendingIntent pendingAlarmIntent = PendingIntent.getBroadcast(context,
                 0,
                 alarmIntent,
-                PendingIntent.FLAG_UPDATE_CURRENT);
+                PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_IMMUTABLE);
         alarmManager.cancel(pendingAlarmIntent);
 
         /* Alarm won't start again if device is rebooted */

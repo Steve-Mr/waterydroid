@@ -118,7 +118,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         super.onCreate(savedInstanceState);
         AlarmHelper alarm = new AlarmHelper();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        int notificationFrequency = Integer.valueOf(prefs.getString("notification_frequency", "120"));
+        int notificationFrequency = Integer.parseInt(prefs.getString("notification_frequency", "120"));
         boolean notificationsNewMessage = prefs.getBoolean("notifications_new_message", true);
 
         alarm.cancelAlarm(this);
@@ -133,7 +133,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     }
 
     @Override
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.pref_headers, target);
     }
@@ -148,7 +147,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                 || NotificationPreferenceFragment.class.getName().equals(fragmentName);
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class GeneralPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
@@ -169,7 +167,6 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public static class NotificationPreferenceFragment extends PreferenceFragment {
         @Override
         public void onCreate(Bundle savedInstanceState) {
