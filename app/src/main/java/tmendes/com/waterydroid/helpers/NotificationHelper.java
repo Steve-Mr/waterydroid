@@ -41,13 +41,14 @@ public class NotificationHelper extends ContextWrapper {
     private NotificationManager notificationManager;
 
     private static final String CHANNEL_ONE_ID = "tmendes.com.waterydroid.CHANNELONE";
-    private static final String CHANNEL_ONE_NAME = Resources.getSystem().getString(R.string.channelName);
+    private String CHANNEL_ONE_NAME;
 
     private final Context ctx;
 
     public NotificationHelper(Context ctx) {
         super(ctx);
         this.ctx = ctx;
+        CHANNEL_ONE_NAME = ctx.getResources().getString(R.string.channelName);
         createChannels();
     }
 

@@ -130,10 +130,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         if (notificationsNewMessage) {
 
             if (ContextCompat.checkSelfPermission(
-                    this, android.Manifest.permission.POST_NOTIFICATIONS) ==
+                    this, android.Manifest.permission.POST_NOTIFICATIONS) !=
                     PackageManager.PERMISSION_GRANTED) {
-
-            } else {
                 // You can directly ask for the permission.
                 requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS}, 10010);
             }

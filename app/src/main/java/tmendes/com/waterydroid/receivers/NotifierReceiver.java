@@ -42,7 +42,7 @@ public class NotifierReceiver extends BroadcastReceiver {
 
             /* Notify */
             NotificationHelper nHelper = new NotificationHelper(context);
-            @SuppressLint("ResourceType") Notification.Builder nBuilder = nHelper
+            Notification.Builder nBuilder = nHelper
                     .getNotification(title, messageToShow);
             nHelper.notify(1, nBuilder);
         }
