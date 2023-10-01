@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WateryDroid</string>
+    <string name="pref_header_general">通用设置</string>
+    <string name="pref_notification_message">通知内容</string>
+    <string name="pref_notification_message_value">该喝水了！</string>
+    <string name="pref_title_notification_frequency">通知频率</string>
+    <string name="pref_header_notifications">通知设置</string>
+    <string name="pref_title_new_message_notifications">提醒喝水</string>
+    <string name="pref_title_ringtone">铃声</string>
+    <string name="pref_ringtone_silent">静音</string>
+    <string name="pref_notification_start">开始提醒时间</string>
+    <string name="pref_notification_stop">结束提醒时间</string>
+    <string name="settings_time_set">确定</string>
+    <string name="settings_time_cancel">取消</string>
+    <string name="channelName">喝水提醒</string>
+</resources>

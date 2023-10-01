@@ -27,4 +27,5 @@
     <string name="pref_notification_stop">Parar notificações as</string>
     <string name="settings_time_set">Ok</string>
     <string name="settings_time_cancel">Cancelar</string>
+    <string name="channelName">lembrete de bebida</string>
 </resources>
